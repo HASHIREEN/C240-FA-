@@ -1,6 +1,6 @@
 // Initialize Botpress Webchat
 window.botpress.init({
-    "botId": "7a95fc67-b765-4583-8794-2d85c6dfffa1", //
+    //"botId": "7a95fc67-b765-4583-8794-2d85c6dfffa1", //
     "clientId": "a6f2c39d-2221-4d0a-92a3-48cfb93078c0", //
     "selector": "#webchat", //
     "configuration": {
