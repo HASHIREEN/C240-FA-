@@ -179,10 +179,10 @@
         "selector": "#webchat"
       });
 
-      // Function to open the chatbot
+      // Function to toggle the chatbot open/close
       function openChat() {
         if (window.botpress) {
-          window.botpress.open();
+          window.botpress.toggle();
         }
       }
     </script>
