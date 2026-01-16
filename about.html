@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SpeakEasy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5rem 10%;
+            background: linear-gradient(135deg, #eff6ff 0%, #fef3c7 100%);
+            text-align: center;
+            min-height: 50vh;
+        }
+
+        .about-hero h1 {
+            font-size: 3rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-hero p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .team-badge {
+            display: inline-block;
+            background: #f97316;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Mission Section */
+        .mission-section {
+            padding: 4rem 10%;
+            background: white;
+        }
+
+        .mission-section h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .mission-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+            text-align: center;
+        }
+
+        /* Core Goals Section */
+        .goals-section {
+            padding: 4rem 10%;
+            background: linear-gradient(135deg, #fef3c7 0%, #eff6ff 100%);
+        }
+
+        .goals-section h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .goals-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .goal-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .goal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .goal-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .goal-card h3 {
+            font-size: 1.5rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+
+        .goal-card p {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+
+        /* Languages Section */
+        .languages-section {
+            padding: 4rem 10%;
+            background: white;
+        }
+
+        .languages-section h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .languages-section p {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        .languages-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .language-badge {
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .language-badge:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(249, 115, 22, 0.4);
+        }
+
+        /* Target Audience Section */
+        .audience-section {
+            padding: 4rem 10%;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .audience-section h2 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-section p {
+            font-size: 1.2rem;
+            color: #4b5563;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            padding: 4rem 10%;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background: #f97316;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">说</div>
+            <span>SPEAK<strong>EASY</strong></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="website.html">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#signup" class="sign-up-btn">Sign Up</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <span class="team-badge">👥 Team Groq</span>
+        <h1>About SpeakEasy</h1>
+        <p>We are a team of five passionate students dedicated to making language learning simple, accessible, and fun for hobby learners around the world.</p>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <h2>Our Mission</h2>
+        <div class="mission-content">
+            <p>At SpeakEasy, we believe that language learning should be accessible to everyone. Whether you're a K-pop fan wanting to understand your favorite songs or a traveler preparing for your next adventure, we're here to help you achieve your language goals with the power of AI.</p>
+        </div>
+    </section>
+
+    <!-- Core Goals Section -->
+    <section class="goals-section">
+        <h2>What We Offer</h2>
+        <div class="goals-grid">
+            <div class="goal-card">
+                <div class="goal-icon">🎯</div>
+                <h3>Personalized Support</h3>
+                <p>Our AI adapts to your learning style and pace, providing customized lessons that match your interests and goals. Every learner's journey is unique!</p>
+            </div>
+            <div class="goal-card">
+                <div class="goal-icon">📱</div>
+                <h3>Daily Micro-Learning</h3>
+                <p>Learn in bite-sized sessions that fit into your busy schedule. Just 10-15 minutes a day can make a huge difference in your language journey.</p>
+            </div>
+            <div class="goal-card">
+                <div class="goal-icon">🌏</div>
+                <h3>Multi-Language Access</h3>
+                <p>Choose from Korean, Mandarin, Arabic, Japanese, and Malay. Switch between languages anytime as your interests grow and evolve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages We Offer -->
+    <section class="languages-section">
+        <h2>Languages We Teach</h2>
+        <p>Explore the languages we currently support:</p>
+        <div class="languages-grid">
+            <div class="language-badge">🇰🇷 Korean</div>
+            <div class="language-badge">🇨🇳 Mandarin</div>
+            <div class="language-badge">🇸🇦 Arabic</div>
+            <div class="language-badge">🇯🇵 Japanese</div>
+            <div class="language-badge">🇲🇾 Malay</div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="audience-section">
+        <h2>Who We Serve</h2>
+        <p>SpeakEasy is designed for hobby learners aged 15–30 who want to explore new languages at their own pace. Whether you're learning for travel, culture, career growth, or just for fun, we've got you covered!</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join thousands of learners who are already making progress with SpeakEasy!</p>
+        <a href="website.html" class="cta-button">Start Learning Today</a>
+    </section>
+</body>
+</html>
