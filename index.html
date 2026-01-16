@@ -6,7 +6,8 @@
     <title>SpeakEasy - Learn Mandarin Chinese</title>
     
     <!-- Botpress Webchat -->
-    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2026/01/16/03/20260116034433-9VAPKGZ4.js" defer></script>
     <style>
       #webchat .bpWebchat {
         position: unset;
@@ -440,8 +441,8 @@
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#courses">Courses</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <a href="#signup" class="sign-up-btn">Sign Up</a>
     </nav>
@@ -619,27 +620,28 @@
     <!-- Botpress Initialization Script -->
     <script>
       window.botpress.on("webchat:ready", () => {
-        // Don't auto-open, wait for user click
+        window.botpress.open();
       });
       
       window.botpress.init({
-        "botId": "06e795e0-9dc2-4a97-bab1-6d5358457b02",
+        "botId": "ec45131a-f5a7-4051-a15e-d2b05da579fb",
         "configuration": {
           "version": "v2",
-          "botName": "SpeakEasy Bot",
-          "botAvatar": "https://files.bpcontent.cloud/2026/01/09/04/20260109045633-YV2B8D6K.png",
-          "botDescription": "",
+          "composerPlaceholder": "type your message here..",
+          "botName": "SpeakEasy Korean Assistant",
+          "botAvatar": "https://files.bpcontent.cloud/2026/01/16/04/20260116045502-PNL50NEI.png",
+          "botDescription": "SpeakEasy Korean is an interactive AI tutor that helps learners practise Korean through quick drills, roleplay scenarios, and focused lessons.\nThe chatbot adapts its teaching style and content based on the learner's level, goals, and interests, making Korean learning simple, engaging, and practical.",
           "website": {},
           "email": {},
           "phone": {},
           "termsOfService": {},
           "privacyPolicy": {},
-          "color": "#FF6E1A",
+          "color": "#90d6e3",
           "variant": "solid",
-          "headerVariant": "glass",
+          "headerVariant": "solid",
           "themeMode": "light",
-          "fontFamily": "inter",
-          "radius": 1.5,
+          "fontFamily": "ADLaM Display",
+          "radius": 3,
           "feedbackEnabled": false,
           "footer": "[⚡ by Botpress](https://botpress.com/?from=webchat)",
           "soundEnabled": false,
@@ -648,7 +650,7 @@
           "proactiveBubbleTriggerType": "afterDelay",
           "proactiveBubbleDelayTime": 10
         },
-        "clientId": "a39e575d-8c96-4483-a6b2-6747a7cbc6bd",
+        "clientId": "f14e1bf1-e0c4-4f8d-9ef3-8ee2efeadd0b",
         "selector": "#webchat"
       });
 
