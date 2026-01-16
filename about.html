@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - SpeakEasy</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js" defer></script>
+    <script src="https://files.bpcontent.cloud/2026/01/16/03/20260116034433-9VAPKGZ4.js" defer></script>
+    <style>
+      #webchat .bpWebchat {
+        position: unset;
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      #webchat .bpFab {
+        display: none;
+      }
+    </style>
     <style>
         .about-hero {
             display: flex;
@@ -295,7 +310,38 @@
     <section class="cta-section">
         <h2>Ready to Start Your Journey?</h2>
         <p>Join thousands of learners who are already making progress with SpeakEasy!</p>
-        <a href="website.html" class="cta-button">Start Learning Today</a>
+        <a href="index.html" class="cta-button">Start Learning Today</a>
     </section>
+
+    <!-- Botpress Initialization Script -->
+    <script>
+      // Generate a unique ID for this session
+      const sessionId = 'session-' + Math.random().toString(36).substr(2, 9);
+
+      window.botpress.init({
+        "botId": "ec45131a-f5a7-4051-a15e-d2b05da579fb",
+        "clientId": "f14e1bf1-e0c4-4f8d-9ef3-8ee2efeadd0b",
+        "userId": sessionId,
+        "configuration": {
+          "version": "v2",
+          "composerPlaceholder": "type your message here..",
+          "botName": "SpeakEasy Korean Assistant",
+          "botAvatar": "https://files.bpcontent.cloud/2026/01/16/04/20260116045502-PNL50NEI.png",
+          "botDescription": "SpeakEasy Korean is an interactive AI tutor that helps learners practise Korean through quick drills, roleplay scenarios, and focused lessons.\nThe chatbot adapts its teaching style and content based on the learner's level, goals, and interests, making Korean learning simple, engaging, and practical.",
+          "color": "#90d6e3",
+          "variant": "solid",
+          "headerVariant": "solid",
+          "themeMode": "light",
+          "fontFamily": "ADLaM Display",
+          "radius": 3,
+          "feedbackEnabled": false,
+          "soundEnabled": false
+        },
+        "selector": "#webchat"
+      });
+    </script>
+
+    <!-- Botpress Webchat Container -->
+    <div id="webchat" style="width: 500px; height: 500px; position: fixed; bottom: 20px; right: 20px; z-index: 9999; display: none; box-shadow: 0 10px 40px rgba(0,0,0,0.2); border-radius: 12px; overflow: hidden;"></div>
 </body>
 </html>
